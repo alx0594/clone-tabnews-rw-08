@@ -1,0 +1,24 @@
+name: Testes automatizados
+on:
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  jest:
+    name: Build e Testes
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/chedkout@v4
+      - name: Setup NodeJS
+        uses: actions/setup-node@v4
+        with:
+          node-version: "lts/hydrogen"
+
+      - name: Build
+        run: npm ci
+
+      - name: Testes
+        run: npm test
