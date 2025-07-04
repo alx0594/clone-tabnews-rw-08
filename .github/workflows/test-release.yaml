@@ -1,4 +1,4 @@
-name: Testes automatizados
+name: Build e Teste Release
 on:
   pull_request:
     branches:

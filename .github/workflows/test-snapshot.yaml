@@ -1,4 +1,4 @@
-name: Testes automatizados
+name: Build e Teste Snapshot
 on: workflow_dispatch
 
 jobs:
