@@ -1,0 +1,9 @@
+services:
+  database:
+    container_name: postgres-review
+    image: postgres:16.9-alpine3.21
+    env_file:
+      - ../.env.development
+    ports:
+      - 5432:5432
+# psql --host localhost --port 5432 -d local_db --username local_user
