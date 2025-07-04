@@ -3,6 +3,7 @@ on:
   pull_request:
     branches:
       - main
+      - "releases/**"
 
 jobs:
   jest:
@@ -11,7 +12,7 @@ jobs:
 
     steps:
       - name: Checkout Repository
-        uses: actions/chedkout@v4
+        uses: actions/checkout@v4
       - name: Setup NodeJS
         uses: actions/setup-node@v4
         with:
