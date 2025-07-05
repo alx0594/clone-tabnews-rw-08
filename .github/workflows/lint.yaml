@@ -22,6 +22,9 @@ jobs:
         with:
           node-version: "lts/hydrogen"
 
+      - name: Install
+        run: npm ci
+
       - name: Lint Prettier Fix
         run: npm run lint:prettier:fix
 
