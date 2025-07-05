@@ -1,17 +1,17 @@
-name: Build e Teste Release
+name: Linter Validate
 on:
   pull_request:
     branches:
       - main
-      - "releases/**"
+      - "release/**"
   push:
     branches:
       - main
-      - "releases/**"
+      - "release/**"
 
 jobs:
-  jest:
-    name: Build e Testes
+  linters:
+    name: Linters
     runs-on: ubuntu-latest
 
     steps:
@@ -22,8 +22,11 @@ jobs:
         with:
           node-version: "lts/hydrogen"
 
-      - name: Build
+      - name: Install
         run: npm ci
 
-      - name: Testes
-        run: npm test
+      - name: Lint Prettier Fix
+        run: npm run lint:prettier:fix
+
+      - name: Lint Eslint Check
+        run: npm run lint:eslint:check
