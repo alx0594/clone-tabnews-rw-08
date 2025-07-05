@@ -28,5 +28,5 @@ jobs:
       - name: Lint Prettier Fix
         run: npm run lint:prettier:fix
 
-      - name: Lint Eslint Fix
-        run: npm run lint:eslint:fix
+      - name: Lint Eslint Check
+        run: npm run lint:eslint:check
